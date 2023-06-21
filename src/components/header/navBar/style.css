@@ -1,0 +1,86 @@
+.header{
+    background-color: rgba(255, 192, 203, 0.142);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    color:rgb(197, 156, 163);
+    font-size: 40px;
+}
+.icono-carrito, .carrito{
+    color: pink;
+    width: 60px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: row;
+    align-items:end;
+    padding-right: 20px;
+}
+
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 20px 20px;
+}
+
+.side-menu{
+    display: none;
+}
+.icono-nav{
+    color:pink;
+    display: block;
+    position: relative;
+    font-size: 25px;
+}
+.icono-nav::before,
+.icono-nav::after{
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+.icono-nav::before{
+    top: 5px;
+}
+.icono-nav::after{
+    top: -5px;
+}
+.nav{
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 105px;
+    background-color: rgba(255, 192, 203, 0.142);
+    margin-left: -20px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.menu{
+    padding-left: 20px;
+
+}
+.menu a{
+    display: block;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.menu a:hover{
+    font-weight: bold;
+}
+.side-menu:checked ~ nav{
+    max-height: 100%;
+    max-width: 100%;
+
+}
